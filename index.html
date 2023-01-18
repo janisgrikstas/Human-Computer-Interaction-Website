@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> janis grikstas // HCI </title>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.3/css/bulma.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+  	body {font-family: 'Inconsolata', sans-serif;};
+    nav.navbar {
+      height: 7rem !important;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- START NAV -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="../">
+          <img src="icon.jpg" alt="Logo">
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          
+          <a class="navbar-item is-active is-size-5 has-text-weight-semibold" href = "index.html">
+            home
+          </a>
+          <a class="navbar-item is-size-5 has-text-weight-semibold" href ="assignments.html">
+            assignments
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+
+  <!-- Image -->
+  <section class="hero ">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <figure class="image is-9by9">
+              <img src="janis.png" alt="">
+            </figure>
+          </div>
+        </div>
+
+        
+        
+        <section class="hero is-danger ">
+        <div class="hero-body">
+        <div class="container">
+            <section class="section">
+                <div class="columns">
+                    <div class="column is-12">
+                    <div class="content is-medium">
+                        <h1 class="title">about me</h1>
+                        <p> hi there, i'm janis! i'm pursuing a bachelor's degree in computer science, with an expected
+                        graduation of may 2023. i have previous experience as a software engineering intern at AT&T,
+                        and as an e-commerce manager for local businesses. i'm very excited to learn more about
+                        bridging the gap between design and technology in this class, and gaining more experience
+                        working in agile methodologies within a team.
+                        </p>
+               
+                    </div>
+                    </div>
+                </div>
+                </section>
+        </div>
+        </div>
+        </section>    
+
+        <div class="is-divider"></div>
+
+        
+
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>
