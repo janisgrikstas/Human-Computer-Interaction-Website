@@ -10,7 +10,7 @@
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
   	body {font-family: 'Inconsolata', sans-serif;};
@@ -73,7 +73,16 @@
                     <div class="column is-12">
                     <div class="content is-medium">
                         <h1 class="title">user research paper</h1>
-                        <p>embed here</p>
+                        <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
+                        <script type="text/javascript">
+                          document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+                            var adobeDCView = new AdobeDC.View({clientId: "c7862db7d347458a93e3bfc47a0c119c", divId: "adobe-dc-view"});
+                            adobeDCView.previewFile({
+                              content:  {location: {url: "User_Research_Paper.pdf"}},
+                              metaData:{fileName: "User_Research_Paper.pdf"}
+                            }, {embedMode: "SIZED_CONTAINER"});
+                          });
+                        </script>
                
                     </div>
                     </div>
